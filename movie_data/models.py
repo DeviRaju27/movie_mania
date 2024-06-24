@@ -5,6 +5,7 @@ class MovieData(models.Model):
     duration = models.FloatField()
     rating = models.FloatField()
     category = models.CharField(max_length=100, default= 'drama')
+    image = models.ImageField(upload_to='images', default='images/default.png')
 
     def __str__(self):
         return f'{self.name}'
